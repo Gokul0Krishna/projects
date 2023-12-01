@@ -71,7 +71,7 @@ if pos== 'stay':
    \))ejm97/.,(//,,..,,\||(,wo,\ ).((//
                              -  \)''')
     exit()
-else:
+elif pos=="explore":
     print("so you have chosen to explore")
     print("to your left there is lake that you must swim across and to your right there is a thick forest")
     print("you have to options to choose form")
@@ -100,7 +100,7 @@ else:
    \))ejm97/.,(//,,..,,\||(,wo,\ ).((//
                              -  \) ''')  
         exit()   
-    else:
+    elif dir=="go left":
         print("you find your self swiming in a bottom less lake")
         print("as you reach the half waypoint of the river you come across a floating plank")
         print("you grab onto it and rest for sometime to catch you breath")
@@ -126,7 +126,7 @@ else:
           |          /_.| .  \/
   *       | *   **  / * **  |\)/)    **
    \))ejm97/.,(//,,..,,\||(,wo,\ ).((// ''')
-        else:
+        elif live=="swim":
           print("as make it on to the shore with the last of your energy")
           print("you find an old abandoned structue, but a stuctre ")
           print("on furthur examining the stucture you find this to be a temple of sorts")
@@ -156,7 +156,7 @@ else:
              print("you eneter a dim light room with a chest cover in dust and cobwebs")
              print("you open the chest to find it coverd in gold ") 
              print("you win") 
-          else:
+          elif  door=="right door":
              print("as you enter the room to find it filled with beasts that have taken recedence there")
              print("unable to escape to defend your self you perish")
              print('''   (   >
@@ -173,3 +173,11 @@ else:
           |          /_.| .  \/
   *       | *   **  / * **  |\)/)    **
    \))ejm97/.,(//,,..,,\||(,wo,\ ).((// ''')          
+          else:
+            print("invalid option")
+        else:
+          print("invalid option")
+    else:
+      print("invalid option") 
+else:
+   print("invalid option")      
