@@ -2,6 +2,7 @@ import random
 print("welcome to the Rock Paper Scissor game")
 print("to play rock enter '0' to play paper enter '1' to play scissor enter '2'")
 ch=int(input());
+print("your choice is:")
 if ch == 0:
     print("""
     _______
@@ -34,7 +35,7 @@ elif ch==2:
 else:
     print("your option is invalid")    
 cch=random.randint(0,2)
-
+print("The computer's choice is:")
 if cch == 0:
     print("""
     _______
