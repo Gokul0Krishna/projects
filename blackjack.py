@@ -15,39 +15,45 @@ def part_1():
         i+=1
     print(f"Your cards are {user}")
     print(f"the dealer's card is [{system[0]}] ")        
+    for i in user:
+            total+=i 
+    if total==21:
+        print("you win")
     part2()        
 
 def part2():
     ch="y"
     total=0
-    ch=input("do you want to draw another card 'y' or 'n' ")
+    ch=input("do you want to draw another card 'y' or 'n' ").lower()
     if ch=="y":
         while ch=="y":
             user.append(random.choice(cards))
             print(user)
             for i in user:
                 total+=i
-            print(total)
             if total>21:
                 print("you loose")
                 exit()
             elif total<21:
-                a=len(user)
-                print(a)   
+                a=len(user)   
                 j=0
                 while(j<a-2):
                     system.append(random.choice(cards))
-                    print(system)
+                    total=0
                     for i in system:
                         total+=i
-                    if total>17:
+                    if total<16:
                         j+=1
-                    else:
+                    elif total>17 and total<21:
                         part3()
+                    elif total>21:
+                        print("you win")
+                        exit()    
+                        
             elif total==21:
                 print("you win")
                 exit()
-        ch=input("do you want to draw another card 'y' or 'n' ")                        
+            ch=input("do you want to draw another card 'y' or 'n' ").lower()                        
     else:
             part3()
 
@@ -61,11 +67,14 @@ def part3():
         totals+=i
     if  totalu>totals:
         print("you win")
+        exit()
     elif totals>totalu:
         print("you loose")
+        print(system)
+        exit()
     elif totalu==totals:
         print("it is a draw")
-
+        exit()
 print('''                                                                                    
 88          88                       88        88                       88         
 88          88                       88        ""                       88         
